@@ -987,6 +987,35 @@ td.refund-val{color:var(--blue)!important}
     <div class="joint-hint" id="joint-adj-hint"><i class="ti ti-users"></i><span>무증빙 경비도 본인 몫(<b id="d_adj_share_pct">50</b>%) 환산 적용 → 조정 후 본인 몫 소득금액 <b id="d_adjIncome_mine">0원</b></span></div>
   </div>
 
+  <!-- 소득율 카드 3컬럼 -->
+  <div class="rate-card rate-card-3">
+    <div class="rc-box prev">
+      <span class="rc-lbl">2024년 소득율</span>
+      <span class="rc-rate" id="rs_prevR">—</span>
+      <span class="rc-income" id="rs_prevA">전기 데이터 없음</span>
+      <span class="rc-tax" id="rs_prevTx">사진 업로드 시 표시</span>
+    </div>
+    <div class="rc-arrow">→</div>
+    <div class="rc-box base">
+      <span class="rc-lbl">2025년 소득율</span>
+      <span class="rc-rate" id="rs_baseR">0.0%</span>
+      <span class="rc-income" id="rs_baseA">소득금액 —</span>
+      <span class="rc-tax" id="rs_baseTx">5월 납부 —</span>
+    </div>
+    <div class="rc-arrow">→</div>
+    <div class="rc-box adj">
+      <span class="rc-lbl">2025년 조정 후</span>
+      <span class="rc-rate" id="rs_adjR">—</span>
+      <span class="rc-income" id="rs_adjA">적용 전</span>
+      <span class="rc-tax" id="rs_adjTx">—</span>
+    </div>
+  </div>
+  <!-- 세금 감소 효과 - 별도 행 -->
+  <div class="rc-diff-row inactive" id="rcDiff">
+    <span class="rcdr-lbl"><i class="ti ti-discount-2"></i> 세금 감소 효과 <span class="rcdr-sub">(2025 기본 → 조정 후)</span></span>
+    <span class="rcdr-val" id="rs_diffV">적용 버튼을 눌러주세요</span>
+  </div>
+
   <div class="section">
     <div class="sec-title"><i class="ti ti-discount-2"></i>소득공제</div>
     <!-- 기본공제 (소득세법 §50) -->
@@ -1036,35 +1065,6 @@ td.refund-val{color:var(--blue)!important}
 
 <!-- ══ 우측 ══ -->
 <div>
-
-  <!-- 소득율 카드 3컬럼 -->
-  <div class="rate-card rate-card-3">
-    <div class="rc-box prev">
-      <span class="rc-lbl">2024년 소득율</span>
-      <span class="rc-rate" id="rs_prevR">—</span>
-      <span class="rc-income" id="rs_prevA">전기 데이터 없음</span>
-      <span class="rc-tax" id="rs_prevTx">사진 업로드 시 표시</span>
-    </div>
-    <div class="rc-arrow">→</div>
-    <div class="rc-box base">
-      <span class="rc-lbl">2025년 소득율</span>
-      <span class="rc-rate" id="rs_baseR">0.0%</span>
-      <span class="rc-income" id="rs_baseA">소득금액 —</span>
-      <span class="rc-tax" id="rs_baseTx">5월 납부 —</span>
-    </div>
-    <div class="rc-arrow">→</div>
-    <div class="rc-box adj">
-      <span class="rc-lbl">2025년 조정 후</span>
-      <span class="rc-rate" id="rs_adjR">—</span>
-      <span class="rc-income" id="rs_adjA">적용 전</span>
-      <span class="rc-tax" id="rs_adjTx">—</span>
-    </div>
-  </div>
-  <!-- 세금 감소 효과 - 별도 행 -->
-  <div class="rc-diff-row inactive" id="rcDiff">
-    <span class="rcdr-lbl"><i class="ti ti-discount-2"></i> 세금 감소 효과 <span class="rcdr-sub">(2025 기본 → 조정 후)</span></span>
-    <span class="rcdr-val" id="rs_diffV">적용 버튼을 눌러주세요</span>
-  </div>
 
   <!-- ══ 타소득 입력 (소득세법 §4: 종합소득 합산) ══ -->
   <div class="section">
